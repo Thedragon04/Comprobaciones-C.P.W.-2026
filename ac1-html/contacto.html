@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante con variedad de sabores y platos típicos del barrio">
+    <meta name="author" content="Jafeth">
+    <meta name="keywords" content="restaurante, comida, sabores, barrio, platos típicos">
+    <link rel="icon" type="image/png" href="recursos/logo.png">
+    <title>Contacto | Sabores del barrio</title>
+
+</head>
+<body>
+    <header>
+        <h1 id="inicio">Sabores del barrio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Sección de reserva -->
+        <section id="reserva">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Reserva</legend>
+                        <p>Pon tus datos para hacer una reserva.</p>
+                    
+                        <label for="nombre">*Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder=" Jafeth Espinoza Villarreal" minlength="3" maxlength="50" ><br><br>
+
+                        <label for="email">*Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required><br>
+
+                        <p>*Método de pago:</p>
+
+                        <input type="radio" id="efectivo" name="metodo" value="efectivo" required>
+                        <label for="efectivo">Efectivo</label><br>
+
+                        <input type="radio" id="tarjeta" name="metodo" value="tarjeta" required>
+                        <label for="tarjeta">Tarjeta de crédito</label><br>
+
+                        <input type="radio" id="Sinpe" name="metodo" value="Sinpe" required>
+                        <label for="Sinpe">SINPE</label><br><br>
+
+                        <fieldset>
+                            <legend>Detalles de la reserva</legend>
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" id="fecha" name="fecha"><br><br>
+
+                            <label for="hora">Hora:</label>
+                            <input type="time" id="hora" name="hora" max="22:00" min="09:00"><br><br>
+
+                            <label for="comentarios">Comentarios adicionales:</label><br>
+                            <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Máximo de 500 caracteres" maxlength="500"></textarea><br><br>
+                        
+                        </fieldset>
+                    
+
+                    
+            
+                </fieldset>
+                <p><button type="submit">Hacer reserva</button></p>
+            </form>
+            
+        </section>
+    </main>
+
+
+    <footer>
+        <p>Sabores del barrio derechos reservados &copy; 2026</p>
+    </footer>
+</body>
+</html>
