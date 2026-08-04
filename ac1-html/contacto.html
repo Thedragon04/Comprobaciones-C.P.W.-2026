@@ -31,13 +31,13 @@
                     <legend>Reserva</legend>
                         <p>Pon tus datos para hacer una reserva.</p>
                     
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+                        <label for="nombre">*Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder=" Jafeth Espinoza Villarreal" minlength="3" maxlength="50" ><br><br>
 
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br><br>
+                        <label for="email">*Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required><br>
 
-                        <p>Método de pago:</p>
+                        <p>*Método de pago:</p>
 
                         <input type="radio" id="efectivo" name="metodo" value="efectivo" required>
                         <label for="efectivo">Efectivo</label><br>
@@ -65,7 +65,7 @@
                     
             
                 </fieldset>
-                <button type="reset">Hacer reserva</button>
+                <p><button type="submit">Hacer reserva</button></p>
             </form>
             
         </section>
