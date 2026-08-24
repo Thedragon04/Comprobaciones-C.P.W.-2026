@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body header, main, aside{
+    margin: 0 auto;
+    width: 1200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h1,h2,h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: #333333;
+    line-height: 1.6;
+}
+
+h1{font-size: 2.5rem;}
+h2{font-size: 2rem;}
+h3{font-size: 1.5rem;}
+
+p{
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #861e49;
+}
+
+.marca{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: #333333;
+
+}
+
+#cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 0.1rem solid #861e49;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: beige;
+    margin-bottom: 4rem;
+}
+
+
+.menu-principal ul li{
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.8rem;
+    background-color: #ffd7a6;
+    border-radius: 1rem;
+    list-style: none;
+}
+.menu-principal ul li:hover{
+    background-color: #ffc782;
+}
+
+.enlace-activo{
+    color: red;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    background-color: beige;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.boton {
+    display: block;
+    background-color: #ffd7a6;
+    border-radius: 1rem;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.boton:hover{
+    background-color: #ffc782;
+}
+
+.boton:active{
+    background-color: #fcb358;
+}
+
+
+.rejilla-servicios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    gap: 2rem ;
+}
+
+.tarjeta{
+    box-shadow: 0 2px 0.8px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    background-color: beige;
+    padding: 1rem;
+}
+
+#servicios h2{
+    border-bottom: 0.1rem solid #861e49;
+}
+#historia h2{
+    border-bottom: 0.1rem solid #861e49;
+}
+
+.cita{
+    border-left: 0.8rem solid #861e49;
+    position: relative;
+    background-color: beige;
+    padding: 1rem 6rem 6rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 65rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.cita > p{
+    font-size: 1.5rem;
+}
+
+
+.cita-autoria{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    opacity: 0.6;
+    font-size: 1rem;
+}
+
+.tarjeta-pie{
+    margin-top: 1rem;
+    border-top: 0.1rem solid #861e49;
+    font-weight: 600;
+}
+
+
+#historia h2{
+    margin-top: 3rem
+
+}
+
+
+#aviso{
+    margin-top: 12rem ;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: beige;
+    border-radius: 0 1rem 1rem 0;
+    border-left: 0.8rem solid #861e49;
+}
+
+
+.pie-contenido{
+    position: relative;
+    background-color: beige;
+    padding: 4rem;
+    padding-left: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem ;
+}
+
+.creditos{
+    align-items: center;
+    border-top: 0.1rem solid #861e49;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 24rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+.datos-contacto{
+    line-height: 1.8;
+}
+
+/*Catalogo*/
+
+.indice{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.indice ul > li{
+    display: inline-block;
+    background-color: bisque;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-right: 2rem;
+}
+
+.indice ul > li:hover{
+    background-color: #ffc782;
+}
+
+.indice ul > li:active{
+    background-color: #fcb358;
+}
+
+.tabla-catalogo{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.tabla-catalogo th, td{
+    padding: 10px;
+    border: 1px solid #333333;
+    text-align: left;
+    
+}
+
+.tabla-catalogo thead th{
+    background-color: #fcb358;
+    color: black;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /*Trabaja encabezados de la tabla*/
+}
+
+.tabla-catalogo tfoot{
+    background-color: beige;
+    border-top: 0.3rem solid #861e49 ;
+}
+
+.tabla-catalogo tbody tr:nth-child(even){
+    background-color: bisque;
+}
+
+#categorias h2{
+    border-bottom: 0.1rem solid #861e49;
+}
+
+.lista-categorias{
+    padding: 2rem;
+}
+
+.lista-categorias >li{
+    padding: 0.5rem;
+}
+
+.lista-categorias li > ul >li{
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.lista-categorias li > ul{
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.glosario {
+    background-color: beige;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.glosario dt{
+    font-weight: 700;
+}
+
+.glosario dd {
+    padding: 0 0 1rem 1.5rem;
+}
+
+
+/*Tabla*/
+#pedido{
+    margin-top: 3rem;
+}
+
+.formulario-pedido{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+legend{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+}
+
+.grupo-campos{
+    background-color: beige;
+    padding: 1rem;
+    border-color: #333333;
+    border-radius: 1rem;
+
+}
+
+.campo input, select, textarea{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: #ffd7a6;
+    width: 100%;
+    height: 2.8rem;
+    padding-left: 1rem;
+    border: 0.1rem solid #050505;
+}
+.campo input:valid:not(:placeholder-shown){
+    border: 0.1rem solid #00ff04;
+}
+
+.campo input:invalid:not(:placeholder-shown){
+    border: 0.1rem solid #ff0000;
+}
+.campo textarea{
+    height: 8rem;
+}
+
+.boton-secundario{
+    background-color: antiquewhite;
+    margin-left: 1rem;
+}
+
+
+.grupo-botones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
