@@ -220,6 +220,8 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .tarjeta {
@@ -259,6 +261,8 @@ img {
   grid-template-columns: repeat(1fr);/*grid para la parte movil*/
   grid-auto-rows: 26rem;
   gap: 1.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .pieza {
@@ -394,6 +398,8 @@ img {
   gap: 4.4rem;
   align-items: flex-start;
   flex-direction: column;/*Quiebre de vista movil*/
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .columna        { max-width: 56rem; }
@@ -457,7 +463,7 @@ img {
 
 /* ─── FORMULARIO ─────────────────────────────────────────────────────── */
 .formulario {
-  max-width: 72rem;
+  max-width: 32rem;
   margin: 0 auto;
 }
 
@@ -651,6 +657,8 @@ img {
 }
 .dos-columnas{
   flex-direction: column;
+  margin-left: 0;
+  margin-right: 0;
 }
 .columna-figura img {
   max-width: 100%;
@@ -674,6 +682,18 @@ img {
 }
 .tabla tfoot td{
   font-size: 1.5rem
+}
+.fila-propuestas{
+  margin-left: 0;
+  margin-right: 0;
+}
+.rejilla-galeria{
+  margin-left: 0;
+  margin-right: 0;
+}
+.formulario{
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .boton {
@@ -702,6 +722,10 @@ img {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 26rem;
     gap: 1.8rem;
+}
+.formulario{
+  max-width: 72rem;
+  margin: 0 auto;
 }
 .cita-texto {
   font-size: 2.3rem;
