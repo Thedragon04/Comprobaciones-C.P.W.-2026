@@ -1,0 +1,612 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   CASA TOMILLO · HOJA DE ESTILOS
+   Escuela de cocina · San José, Costa Rica
+
+   Esta hoja produce un sitio que se ve correctamente en un monitor de
+   escritorio. Fue escrita antes de que el proyecto contemplara el uso
+   desde teléfonos.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+
+/* ─── RESET ──────────────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%
+}
+
+
+/* ─── VARIABLES ──────────────────────────────────────────────────────── */
+:root {
+  --verde:        #3D5A40;
+  --verde-oscuro: #2A3F2C;
+  --terracota:    #B5643C;
+  --terracota-os: #94502F;
+  --tinta:        #232323;
+  --suave:        #6E6E6E;
+  --crema:        #FAF7F2;
+  --crema-alt:    #F0EAE0;
+  --linea:        #DDD5C8;
+  --blanco:       #FFFFFF;
+
+  --fuente-titulo: Georgia, 'Times New Roman', serif;
+  --fuente-texto:  'Segoe UI', Arial, sans-serif;
+
+  --radio:  0.6rem;
+  --sombra: 0 0.3rem 0.1rem rgba(0, 0, 0, 0.08);
+  --sombra-alta: 0 0.8rem 0.2rem rgba(0, 0, 0, 0.14);
+}
+
+
+/* ─── BASE ───────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--fuente-texto);
+  font-size: 1.7rem;
+  line-height: 1.65;
+  color: var(--tinta);
+  background-color: var(--crema);
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  line-height: 1.25;
+  color: var(--verde);
+}
+
+h1 { font-size: 5.2rem; }
+h2 { font-size: 3.4rem; }
+h3 { font-size: 2.2rem; }
+
+p { margin-bottom: 1.8rem; }
+
+a {
+  color: var(--terracota);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+
+/* ─── CONTENEDORES ───────────────────────────────────────────────────── */
+.seccion {
+  width: 118rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.9rem 3rem;
+}
+
+.seccion-alterna {
+  background-color: var(--crema-alt);
+  width: 100%;
+}
+
+.seccion-alterna > * {
+  width: 118rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seccion-titulo {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.seccion-entrada {
+  width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4.8rem;
+  text-align: center;
+  color: var(--suave);
+}
+
+.pagina-encabezado {
+  width: 118rem;
+  margin: 0 auto;
+  padding: 8rem 3rem 4.8rem;
+  text-align: center;
+}
+
+.pagina-titulo   { margin-bottom: 1rem; }
+.pagina-bajada   { color: var(--suave); font-size: 1.9rem; }
+.subtitulo       { margin-top: 2.8rem; margin-bottom: 1rem; }
+
+
+/* ─── CABECERA ───────────────────────────────────────────────────────── */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 118rem;
+  margin: 0 auto;
+  padding: 1.8rem 3rem;
+  background-color: var(--blanco);
+  border-bottom: 0.1rem solid var(--linea);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--verde);
+}
+
+.marca-icono { color: var(--verde); }
+
+.marca-texto {
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.menu-enlace {
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  color: var(--tinta);
+  font-weight: 600;
+  border-radius: var(--radio);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.menu-enlace:hover {
+  background-color: var(--crema-alt);
+  color: var(--verde);
+}
+
+.menu-enlace:focus {
+  outline: 0.2rem solid var(--terracota);
+  outline-offset: 0.2rem;
+}
+
+.menu-enlace.activo { color: var(--terracota); }
+
+
+/* ─── PORTADA ────────────────────────────────────────────────────────── */
+.portada {
+  background-color: var(--verde);
+  background-image: url('../recursos/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 56rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.portada-caja {
+  background-color: rgba(0, 0, 0, 0.48);
+  padding: 4.8rem;
+  border-radius: var(--radio);
+  width: 72rem;
+}
+
+.portada-titulo {
+  color: var(--blanco);
+  margin-bottom: 1.6rem;
+}
+
+.portada-bajada {
+  color: var(--blanco);
+  font-size: 1.9rem;
+  margin-bottom: 2.8rem;
+}
+
+
+/* ─── TARJETAS · Flexbox ─────────────────────────────────────────────── */
+.fila-propuestas {
+  display: flex;
+  gap: 2.6rem;
+}
+
+.tarjeta {
+  width: 36rem;
+  background-color: var(--blanco);
+  padding: 2.8rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--sombra-alta);
+}
+
+.tarjeta-icono  { color: var(--terracota); margin: 0 auto 1.4rem; }
+.tarjeta-titulo { margin-bottom: 0.8rem; }
+.tarjeta-texto  { color: var(--suave); flex-grow: 1; }
+
+.tarjeta-dato {
+  font-weight: 700;
+  color: var(--verde);
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  padding-top: 1.4rem;
+  border-top: 0.1rem solid var(--linea);
+}
+
+
+/* ─── GALERÍA · Grid ─────────────────────────────────────────────────── */
+.rejilla-galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.8rem;
+}
+
+.pieza {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  background-color: var(--crema-alt);
+}
+
+.pieza img {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pieza:hover img { transform: scale(1.06); }
+
+.pieza-pie {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,0));
+  color: var(--blanco);
+  padding: 2.2rem 1.2rem 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
+/* ─── CITA ───────────────────────────────────────────────────────────── */
+.cita {
+  width: 72rem;
+  margin: 0 auto;
+  padding: 4.4rem;
+  background-color: var(--blanco);
+  border-left: 0.5rem solid var(--terracota);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.cita-texto {
+  font-family: var(--fuente-titulo);
+  font-size: 2.3rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.cita-autoria {
+  color: var(--suave);
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+
+/* ─── ÍNDICE INTERNO ─────────────────────────────────────────────────── */
+.indice {
+  width: 118rem;
+  margin: 0 auto 2rem;
+  padding: 0 3rem;
+}
+
+.indice-titulo { font-size: 1.9rem; margin-bottom: 0.8rem; }
+
+.indice-lista {
+  display: flex;
+  gap: 2.6rem;
+  list-style: none;
+}
+
+.indice-lista a {
+  border-bottom: 0.1rem solid var(--linea);
+  padding-bottom: 0.2rem;
+}
+
+
+/* ─── TABLA ──────────────────────────────────────────────────────────── */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.tabla-titulo {
+  padding: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--suave);
+  font-size: 1.5rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid var(--linea);
+  text-align: left;
+}
+
+.tabla thead th {
+  background-color: var(--verde);
+  color: var(--blanco);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.tabla tbody tr:nth-child(even) { background-color: var(--crema); }
+.tabla tbody tr:hover           { background-color: var(--crema-alt); }
+
+.tabla tfoot td {
+  background-color: var(--crema-alt);
+  font-style: italic;
+  font-size: 1.5rem;
+  border-top: 0.2rem solid var(--verde);
+}
+
+
+/* ─── DOS COLUMNAS · Flexbox ─────────────────────────────────────────── */
+.dos-columnas {
+  display: flex;
+  gap: 4.4rem;
+  align-items: flex-start;
+}
+
+.columna        { width: 56rem; }
+.columna-figura { width: 56rem; margin: 0; }
+
+.columna-figura img {
+  width: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.figura-pie {
+  margin-top: 1.0rem;
+  font-size: 1.4rem;
+  color: var(--suave);
+  text-align: center;
+  font-style: italic;
+}
+
+
+/* ─── LISTAS ─────────────────────────────────────────────────────────── */
+.lista-temario,
+.lista-requisitos,
+.lista-horario {
+  padding-left: 2.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.lista-temario li,
+.lista-requisitos li,
+.lista-horario li { margin-bottom: .8rem; }
+
+.lista-temario ul { padding-left: 2.6rem; margin-top: .8rem; }
+
+.glosario-termino {
+  font-weight: 700;
+  color: var(--verde);
+  margin-top: 1.6rem;
+}
+
+.glosario-definicion {
+  margin-left: 2.6rem;
+  color: var(--suave);
+}
+
+.aviso-taller {
+  background-color: var(--crema-alt);
+  border-left: .4rem solid var(--terracota);
+  padding: 1.6rem;
+  border-radius: 0 var(--radio) var(--radio) 0;
+}
+
+.direccion {
+  font-style: normal;
+  color: var(--suave);
+  line-height: 1.9;
+  margin-bottom: 18rem;
+}
+
+
+/* ─── FORMULARIO ─────────────────────────────────────────────────────── */
+.formulario {
+  width: 72rem;
+  margin: 0 auto;
+}
+
+.grupo {
+  border: 0.1rem solid var(--linea);
+  border-radius: var(--radio);
+  padding: 2.6rem;
+  margin-bottom: 2.6rem;
+  background-color: var(--blanco);
+}
+
+.grupo-titulo {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  color: var(--verde);
+  padding: 0 8rem;
+  font-size: 1.9rem;
+}
+
+.grupo-opciones {
+  border: none;
+  padding: 1.4rem 0 0;
+  margin-bottom: 0;
+}
+
+.campo { margin-bottom: 1.8rem; }
+
+.campo-etiqueta {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.campo-entrada {
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+  border: .1rem solid var(--linea);
+  border-radius: var(--radio);
+  font-size: 1.7rem;
+  font-family: inherit;
+  background-color: var(--crema);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.campo-entrada:focus {
+  outline: none;
+  border-color: var(--terracota);
+  box-shadow: 0 0 0 .3rem rgba(181, 100, 60, 0.18);
+}
+
+.campo-ayuda {
+  display: block;
+  margin-top: .5rem;
+  font-size: 1.4rem;
+  color: var(--suave);
+}
+
+.opcion {
+  margin-bottom: .9rem;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+}
+
+.opcion-marca {
+  width: 1.8rem;
+  height: 1.8rem;
+  accent-color: var(--terracota);
+  cursor: pointer;
+}
+
+.opcion-etiqueta { font-size: 1.6rem; cursor: pointer; }
+
+.fila-botones {
+  display: flex;
+  gap: 1.4rem;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+
+
+/* ─── BOTONES ────────────────────────────────────────────────────────── */
+.boton {
+  display: inline-block;
+  padding: 1.3rem 2.8rem;
+  border: none;
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.boton-principal {
+  background-color: var(--terracota);
+  color: var(--blanco);
+}
+
+.boton-principal:hover {
+  background-color: var(--terracota-os);
+  transform: translateY(-0.2rem);
+}
+
+.boton-secundario {
+  background-color: var(--crema-alt);
+  color: var(--tinta);
+}
+
+.boton-secundario:hover { background-color: var(--linea); }
+
+.boton:focus {
+  outline: 0.2rem solid var(--verde);
+  outline-offset: .2rem;
+}
+
+
+/* ─── PIE ────────────────────────────────────────────────────────────── */
+.pie {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 7.0rem 3.0rem 2.6rem;
+  margin-top: 8.0rem;
+}
+
+.pie-columnas {
+  width: 118rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 4.4rem;
+  justify-content: space-between;
+}
+
+.pie-bloque { width: 34rem; }
+
+.pie-titulo {
+  color: var(--blanco);
+  font-size: 1.9rem;
+  margin-bottom: 1.0rem;
+}
+
+.pie-texto,
+.pie-datos {
+  font-size: 1.5rem;
+  font-style: normal;
+  opacity: 0.88;
+  line-height: 1.85;
+}
+
+.pie-enlace {
+  color: var(--blanco);
+  border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
+}
+
+.pie-enlace:hover { border-bottom-color: var(--blanco); }
+
+.pie-creditos {
+  width: 118.0rem;
+  margin: 4.4rem auto 0;
+  padding-top: 1.8rem;
+  border-top: .1rem solid rgba(255, 255, 255, 0.22);
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0.72;
+  margin-bottom: 0;
+}
