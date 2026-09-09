@@ -56,9 +56,9 @@ h1, h2, h3 {
   color: var(--verde);
 }
 
-h1 { font-size: 5.2rem; }
-h2 { font-size: 3.4rem; }
-h3 { font-size: 2.2rem; }
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2rem; }
 
 p { margin-bottom: 1.8rem; }
 
@@ -69,6 +69,7 @@ a {
 
 img {
   display: block;
+  width: 100%;
 }
 
 
@@ -127,6 +128,7 @@ img {
   padding: 1.8rem 3rem;
   background-color: var(--blanco);
   border-bottom: 0.1rem solid var(--linea);
+  flex-direction: column;
 }
 
 .marca {
@@ -153,6 +155,7 @@ img {
   display: flex;
   gap: 1.8rem;
   list-style: none;
+  flex-direction: column;
 }
 
 .menu-enlace {
@@ -194,7 +197,7 @@ img {
 
 .portada-caja {
   background-color: rgba(0, 0, 0, 0.48);
-  padding: 4.8rem;
+  padding: 2.5rem;/*Acomodo de vista movil*/
   border-radius: var(--radio);
   max-width: 72rem;
 }
@@ -213,7 +216,9 @@ img {
 
 /* ─── TARJETAS · Flexbox ─────────────────────────────────────────────── */
 .fila-propuestas {
-  display: flex;
+  display: flex;/*aqui se rompen las tarjetas se añade esto y ya es reponsive*/
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.6rem;
 }
 
@@ -251,7 +256,8 @@ img {
 /* ─── GALERÍA · Grid ─────────────────────────────────────────────────── */
 .rejilla-galeria {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(1fr);/*grid para la parte movil*/
+  grid-auto-rows: 26rem;
   gap: 1.8rem;
 }
 
@@ -298,7 +304,7 @@ img {
 
 .cita-texto {
   font-family: var(--fuente-titulo);
-  font-size: 2.3rem;
+  font-size: 1.8rem;/*Texto para la parte movil*/
   font-style: italic;
   line-height: 1.5;
 }
@@ -321,6 +327,7 @@ img {
 
 .indice-lista {
   display: flex;
+  flex-direction: column;/*quiebre de vista movil*/
   gap: 2.6rem;
   list-style: none;
 }
@@ -347,19 +354,25 @@ img {
   text-align: left;
   color: var(--suave);
   font-size: 1.5rem;
+  max-width: 40ch;
 }
 
 .tabla th,
 .tabla td {
-  padding: 1.5rem;
+  padding: 1rem;
   border-bottom: 0.1rem solid var(--linea);
   text-align: left;
+  font-size: 1rem;
 }
+
+/*
+
+*/
 
 .tabla thead th {
   background-color: var(--verde);
   color: var(--blanco);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
@@ -370,7 +383,7 @@ img {
 .tabla tfoot td {
   background-color: var(--crema-alt);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-top: 0.2rem solid var(--verde);
 }
 
@@ -380,13 +393,15 @@ img {
   display: flex;
   gap: 4.4rem;
   align-items: flex-start;
+  flex-direction: column;/*Quiebre de vista movil*/
 }
 
 .columna        { max-width: 56rem; }
 .columna-figura { max-width: 56rem; margin: 0; }
 
 .columna-figura img {
-  max-width: 100%;
+  width: 100%;/*Quiebre de vista movil*/
+  height: auto;
   border-radius: var(--radio);
   box-shadow: var(--sombra);
 }
@@ -436,7 +451,7 @@ img {
   font-style: normal;
   color: var(--suave);
   line-height: 1.9;
-  margin-bottom: 18rem;
+  margin-bottom: 1.8rem;
 }
 
 
@@ -573,6 +588,7 @@ img {
   max-width: 118rem;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;/*Aqui se esta trabajando la parte de mobile first para que se acomde directamente en */
   gap: 4.4rem;
   justify-content: space-between;
 }
@@ -610,3 +626,140 @@ img {
   opacity: 0.72;
   margin-bottom: 0;
 }
+
+
+/*Vista tablet*/
+@media (min-width: 700px){
+  h1 { font-size: 4.6rem; }
+  h2 { font-size: 3.4rem; }
+  h3 { font-size: 2.2rem; }
+  .rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 26rem;
+    gap: 1.8rem;
+}
+.portada-caja{
+  padding: 4.8rem;
+}
+.pie-columnas{
+  flex-direction: row;
+}
+.menu{
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+.dos-columnas{
+  flex-direction: column;
+}
+.columna-figura img {
+  max-width: 100%;
+  height: auto;}
+.indice-lista {
+  flex-direction: row;
+}
+.tabla thead th{
+    font-size: 1.5rem;
+}
+.tabla-titulo {
+  font-size: 1.5rem;
+  max-width: none;
+}
+.tabla th,
+.tabla td {
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid var(--linea);
+  text-align: left;  
+  font-size: 1.7rem;
+}
+.tabla tfoot td{
+  font-size: 1.5rem
+}
+}
+
+
+
+/*Vista pc*/
+@media (min-width: 1024px){
+  h1 { font-size: 5.2rem; }
+  h2 { font-size: 3.4rem; }
+  h3 { font-size: 2.2rem; }
+
+    .rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 26rem;
+    gap: 1.8rem;
+}
+.cita-texto {
+  font-size: 2.3rem;
+}
+.cita-autoria {
+  font-size: 1.3rem;
+}
+.dos-columnas{
+  flex-direction: row;
+}
+  .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1.8rem;
+  list-style: none;
+}
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 1.8rem 3rem;
+  background-color: var(--blanco);
+  border-bottom: 0.1rem solid var(--linea);
+  flex-direction: row;
+}
+.pie-columnas {
+  max-width: 118rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4.4rem;
+  justify-content: space-between;
+} 
+
+
+}
+
+
+/*Visualizacion en pc 
+
+
+
+
+
+.menu {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 1.8rem 3rem;
+  background-color: var(--blanco);
+  border-bottom: 0.1rem solid var(--linea);
+  flex-direction: row;
+}
+
+
+
+
+.pie-columnas {
+  max-width: 118rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 4.4rem;
+  justify-content: space-between;
+} */
