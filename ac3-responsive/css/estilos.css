@@ -74,10 +74,10 @@ img {
 
 /* ─── CONTENEDORES ───────────────────────────────────────────────────── */
 .seccion {
-  width: 118rem;
+  max-width: 118rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.9rem 3rem;
+  padding: 1.5rem 0.3rem;
 }
 
 .seccion-alterna {
@@ -86,7 +86,7 @@ img {
 }
 
 .seccion-alterna > * {
-  width: 118rem;
+  max-width: 118rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,7 +97,7 @@ img {
 }
 
 .seccion-entrada {
-  width: 64rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4.8rem;
@@ -106,7 +106,7 @@ img {
 }
 
 .pagina-encabezado {
-  width: 118rem;
+  max-width: 118rem;
   margin: 0 auto;
   padding: 8rem 3rem 4.8rem;
   text-align: center;
@@ -122,7 +122,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 118rem;
+  max-width: 118rem;
   margin: 0 auto;
   padding: 1.8rem 3rem;
   background-color: var(--blanco);
@@ -196,7 +196,7 @@ img {
   background-color: rgba(0, 0, 0, 0.48);
   padding: 4.8rem;
   border-radius: var(--radio);
-  width: 72rem;
+  max-width: 72rem;
 }
 
 .portada-titulo {
@@ -218,7 +218,7 @@ img {
 }
 
 .tarjeta {
-  width: 36rem;
+  max-width: 36rem;
   background-color: var(--blanco);
   padding: 2.8rem;
   border-radius: var(--radio);
@@ -264,7 +264,7 @@ img {
 }
 
 .pieza img {
-  width: 100%;
+  max-width: 100%;
   height: 24rem;
   object-fit: cover;
   transition: transform 0.4s ease;
@@ -287,7 +287,7 @@ img {
 
 /* ─── CITA ───────────────────────────────────────────────────────────── */
 .cita {
-  width: 72rem;
+  max-width: 72rem;
   margin: 0 auto;
   padding: 4.4rem;
   background-color: var(--blanco);
@@ -312,7 +312,7 @@ img {
 
 /* ─── ÍNDICE INTERNO ─────────────────────────────────────────────────── */
 .indice {
-  width: 118rem;
+  max-width: 118rem;
   margin: 0 auto 2rem;
   padding: 0 3rem;
 }
@@ -333,7 +333,7 @@ img {
 
 /* ─── TABLA ──────────────────────────────────────────────────────────── */
 .tabla {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   background-color: var(--blanco);
   border-radius: var(--radio);
@@ -382,11 +382,11 @@ img {
   align-items: flex-start;
 }
 
-.columna        { width: 56rem; }
-.columna-figura { width: 56rem; margin: 0; }
+.columna        { max-width: 56rem; }
+.columna-figura { max-width: 56rem; margin: 0; }
 
 .columna-figura img {
-  width: 100%;
+  max-width: 100%;
   border-radius: var(--radio);
   box-shadow: var(--sombra);
 }
@@ -442,7 +442,7 @@ img {
 
 /* ─── FORMULARIO ─────────────────────────────────────────────────────── */
 .formulario {
-  width: 72rem;
+  max-width: 72rem;
   margin: 0 auto;
 }
 
@@ -509,7 +509,7 @@ img {
 }
 
 .opcion-marca {
-  width: 1.8rem;
+  max-width: 1.8rem;
   height: 1.8rem;
   accent-color: var(--terracota);
   cursor: pointer;
@@ -570,14 +570,14 @@ img {
 }
 
 .pie-columnas {
-  width: 118rem;
+  max-width: 118rem;
   margin: 0 auto;
   display: flex;
   gap: 4.4rem;
   justify-content: space-between;
 }
 
-.pie-bloque { width: 34rem; }
+.pie-bloque { max-width: 34rem; }
 
 .pie-titulo {
   color: var(--blanco);
@@ -601,7 +601,7 @@ img {
 .pie-enlace:hover { border-bottom-color: var(--blanco); }
 
 .pie-creditos {
-  width: 118.0rem;
+  max-width: 118.0rem;
   margin: 4.4rem auto 0;
   padding-top: 1.8rem;
   border-top: .1rem solid rgba(255, 255, 255, 0.22);
