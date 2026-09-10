@@ -320,7 +320,7 @@ img {
 /* ─── GALERÍA · Grid ─────────────────────────────────────────────────── */
 .rejilla-galeria {
   display: grid;
-  grid-template-columns: repeat(1fr);/*grid para la parte movil*/
+  grid-template-columns: repeat(1, 1fr);/*grid para la parte movil*/
   grid-auto-rows: 26rem;
   gap: 1.8rem;
   margin-left: 1rem;
