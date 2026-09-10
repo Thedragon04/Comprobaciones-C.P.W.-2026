@@ -706,6 +706,34 @@ img {
 .formulario{
   max-width: 40rem;
 }
+.tabla thead th{
+    font-size: 1.5rem;
+}
+.tabla-titulo {
+  font-size: 1.5rem;
+  max-width: none;
+}
+.tabla th,
+.tabla td {
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid var(--linea);
+  text-align: left;  
+  font-size: 1.4rem;
+}
+.tabla tfoot td{
+  font-size: 1.5rem
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+.menu-enlace{
+  border-bottom: none;
+}
+.menu-boton{
+  display: none;
+}
 }
 
 /*Vista tablet*/

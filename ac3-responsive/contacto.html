@@ -181,9 +181,14 @@
         </div>
 
         <figure class="columna-figura">
-          <img src="recursos/fachada.jpg"
-               alt="Fachada de la escuela con su rótulo de madera"
-               width="1200" height="900">
+          <picture>
+            <source media="(min-width: 800px)" srcset="recursos/taller-1.jpg">
+            <source media="(min-width: 456px)" srcset="recursos/taller-1.jpg">
+            <img src="recursos/fachada.jpg"
+                alt="Fachada de la escuela con su rótulo de madera"
+                width="1200" height="900">
+          </picture>
+
           <figcaption class="figura-pie">La entrada está sobre la calle 7</figcaption>
         </figure>
 
